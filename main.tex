@@ -1,0 +1,139 @@
+\documentclass[]{article}
+\usepackage{ifdraft}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman]{babel}
+\usepackage[hmargin=2cm, vmargin=1.5cm, a4paper, nomarginpar, nohead]{geometry}
+
+\usepackage{microtype}
+
+%\ifdraft{\usepackage{showframe}}{}
+
+\usepackage{simple-academic-cv}
+
+% colours
+\definecolor{blackgray}{rgb}{0.25,0.25,0.25}
+\colorlet{cvgray}{blackgray!70}
+
+\author{Jack Sparrow}
+\title{Curriculum Vitae}
+\date{}
+
+\usepackage[default]{raleway}
+
+\pagestyle{empty}
+\overfullrule=1mm
+
+\begin{document}
+\maketitle
+\thispagestyle{empty}
+%\vspace{1cm}
+
+\setlength{\parindent}{0pt}
+\setlength{\marginparsep}{0pt}
+\namebox{blackgray}{white}{Pirate \& Buccaneer}
+
+\vspace{2cm}
+
+%\fbox{%
+%\begin{minipage}[t]{\textwidth}
+%
+\begin{minipage}[t]{.5\textwidth}
+	\section*{\textnormal{\faGraduationCap}\ education}
+	\begin{tabular}{>{\raggedleft}p{1cm} |>{\RaggedRight\arraybackslash}p{\dimexpr\textwidth-2cm\relax}}
+		\cvdegree{2020\newline{}\scriptsize\color{cvgray}(vsl.)}{degree}{B.A.}{\color{cvgray!30}\faUniversity\color{black}\ university}{details of degree} 
+	\end{tabular}
+\end{minipage}
+%
+%\vspace{1em}
+\hfill
+\begin{minipage}[t]{.4\textwidth}
+	\section*{\textnormal{\faBook}\ thesis}
+	\begin{tabular}{>{\footnotesize\bfseries\raggedleft}p{1.6cm} >{\footnotesize\RaggedRight}p{\dimexpr\textwidth-2.5cm\relax}}
+		Topic & raiding and pillaging\newline{\color{black!70}\scriptsize several raids and pillages}\\
+		Supervision & Sen. Priv. Ryan\\
+		mark & 1,0	
+	\end{tabular}
+\end{minipage}
+
+\vspace{5em}
+\begin{minipage}[t]{\textwidth}
+	\section*{\textnormal{\faHeartbeat}\ volunteering}
+	\begin{tabular}{r|>{\RaggedRight}p{.8\linewidth}}
+		\cvevent{1999--2000}{Captain}{Queen Mary II}{Pacific Ocean \color{cvgray!30}}{being nice to people}
+	\end{tabular}
+\end{minipage}
+
+%\end{minipage}%
+%}%fbox
+%\hfill%
+%
+\vspace{3em}
+%\fbox{%
+%\begin{minipage}[t]{\textwidth}
+\section*{\textnormal{\faBriefcase}\ jobs}
+\begin{tabular}{r|>{\RaggedRight}p{.8\linewidth}}
+	\cvevent{2000--2001}{Captain}{Titanic}{Atlantic Ocean \color{cvgray!30}}{steering and being responsible}
+\end{tabular}
+
+\vspace{1em}
+\section*{\textnormal{\faWrench}\ skills}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize\RaggedRight}p{0.72\textwidth}}
+	pillaging & using a sword and dodging other swords
+\end{tabular}
+
+\vspace{4em}
+\begin{minipage}{.4\textwidth}
+\section*{\textnormal{\faComment}\ languages}
+\begin{tabular}{>{\footnotesize\bfseries}r >{\footnotesize\RaggedRight}p{0.55\textwidth}}
+	pirate & first language \\
+	english & somewhat 
+\end{tabular}
+\end{minipage}
+%\vspace{2em}
+\hfill
+\begin{minipage}{.5\textwidth}
+\section*{\textnormal{\faUser}\ hobbies}
+% usage \hobbyicon{<fontawesome icon}{Text}{background color of circle}{size of icon}{space text below icon}
+\hobbyicon{\faMusic}{chanting}{cvgray!30}{\LARGE}{2em} \hfill
+\hobbyicon{\faMap}{maps}{cvgray!30}{\LARGE}{2em} \hfill
+\hobbyicon{\faFlask}{drinking}{cvgray!30}{\LARGE}{2em} \hfill
+\hobbyicon{\faicon{sword}}{swords}{cvgray!30}{\LARGE}{2em} \hfill
+%\hobbyicon{\faBeer}{Beer}{cvgray!30}{\huge}{2em}
+\end{minipage}
+
+
+%\footer{black!70}{cvgray!30}{Jack Sparrow}{The Black Pearl}{Tortuga}{0099/333 5647380}{jack@sparrow.com}
+% \footer{font color}{icon color}{name}{Street}{Town}{phone number}{email}
+
+\newpage\newgeometry{nohead, vmargin=2cm}
+\pagenumbering{gobble}
+\letterhead{blackgray}{white}{\large\textbf{Jack Sparrow}\newline\normalsize somewhere 19\\12345 some city\vspace{.3em}\newline\faEnvelopeO\ jack@sparrow.net\newline\faPhone\ +1 88 999999}
+
+\begin{minipage}[t][3em][t]{.48\textwidth}
+	\raggedright\textbf{Some Ship}\vspace{.3em}\\
+	\textit{%
+		Address of ship
+	}%
+\end{minipage}
+\hfill
+\begin{minipage}[t][3em][t]{.2\textwidth}
+	\flushright{\today}
+\end{minipage}
+\vspace{5em}\\
+\raggedright
+\setlength{\parskip}{1.3em}
+\setlength{\baselineskip}{1.3em}
+\textbf{Application as pirate}
+
+Dear ladies and gents,
+
+\input{letter.tex}
+
+Kindest regards
+%\includegraphics[width=3cm]{signature.png}\\
+\makeatletter
+\textbf{\@author}
+\makeatother
+\vspace{2em}\\
+\textit{\color{cvgray}{attached: cv}}
+\end{document}
